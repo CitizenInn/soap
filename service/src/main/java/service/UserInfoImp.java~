@@ -1,0 +1,16 @@
+package service;
+
+import javax.jws.WebService;
+
+@WebService(targetNamespace = "http://www.example.org/contract/UserInfo", 
+            portName="UserInfoPort",
+            serviceName="UserInfoService", 
+            endpointInterface="service.UserInfo")
+public class UserInfoImpl implements UserInfo {
+
+    public String checkAvailability() {
+        return "service is up";
+    }
+}
+
+
